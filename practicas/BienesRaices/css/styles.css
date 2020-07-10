@@ -1,6 +1,16 @@
+/*el box sizing hace que no se incremente el tamaño de los elementos cuand
+agregar un padding*/
+
 html {
     /** reset para rems - 62.5% = 10px de 16px**/
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -23,6 +33,35 @@ body {
 
 .centrar-texto {
     text-align: center;
+}
+
+
+/*imagenes y enlaces son display inline, para editar cambiar a display block/inline-block*/
+
+
+/** Botones **/
+
+.boton {
+    color: #fff;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.boton-amarillo {
+    background-color: #e08709;
+}
+
+.boton-verde {
+    background-color: #71b100;
+}
+
+.d-block {
+    display: block!important;
 }
 
 
@@ -156,4 +195,38 @@ h4 {
 .contenido-anuncios h3,
 .contenido-anuncios p {
     margin: 0;
+}
+
+.precio {
+    font-weight: 700;
+    color: #71b100;
+}
+
+.ver-todas {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/** Contenido seccion contacto**/
+
+.imagen-contacto {
+    background-image: url(../img/encuentra.jpg);
+    background-position: center center;
+    background-size: cover;
+    height: 40rem;
+    display: flex;
+    /*centra verticalmente - align-items*/
+    align-items: center;
+}
+
+.contenido-contacto {
+    /*factor de crecimiento flex 1 detecta el tamaño disponible y los elementos
+    dentro de este y divide tamaño/elementos y asigna ese tamaño*/
+    flex: 1;
+    color: #fff;
+}
+
+.contenido-contacto p {
+    font-size: 1.8rem;
 }
