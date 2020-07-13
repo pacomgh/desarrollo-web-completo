@@ -202,6 +202,21 @@ h4 {
     color: #71b100;
 }
 
+.iconos-caracteristicas {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+}
+
+.iconos-caracteristicas li {
+    display: flex;
+}
+
+.iconos-caracteristicas li img {
+    margin-right: 2rem;
+}
+
 .ver-todas {
     display: flex;
     justify-content: flex-end;
@@ -229,4 +244,42 @@ h4 {
 
 .contenido-contacto p {
     font-size: 1.8rem;
+}
+
+
+/** Seccion inferior **/
+
+.seccion-inferior {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seccion-inferior .blog {
+    flex-basis: 60%;
+}
+
+.seccion-inferior .testimoniales {
+    flex-basis: calc(40% - 2rem);
+}
+
+.entrada-blog {
+    display: flex;
+    justify-content: space-between;
+}
+
+.entrada-blog:last-of-type {
+    margin-bottom: 0;
+}
+
+.entrada-blog .imagen {
+    flex-basis: 40%;
+}
+
+.entrada-blog .texto-entrada {
+    flex-basis: calc(60% - 3rem);
+}
+
+.texto-entrada h4 {
+    margin: 0;
+    line-height: 1.3;
 }
