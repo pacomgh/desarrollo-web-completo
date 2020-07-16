@@ -303,3 +303,59 @@ h4 {
 .texto-entrada span {
     color: #e08709;
 }
+
+.testimonial {
+    background-color: #71b100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: #fff;
+    border-radius: 2rem;
+}
+
+.testimonial p {
+    text-align: right;
+}
+
+
+/*el hijo debe llebar posicion absoluta para que pueda acceder a otras propiedades*/
+
+.testimonial blockquote::before {
+    content: '';
+    background-image: url(../img/comilla.svg);
+    /*si se da width y heigh a un selector estatico se debe usar display block*/
+    width: 4rem;
+    height: 4rem;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -1rem;
+}
+
+
+/*el padre debe tener posiscion relativa, no cambia la posicion por default
+se colocan esas posiciones para que no tome complata la pagina*/
+
+.testimonial blockquote {
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+
+/** Footer **/
+
+.site-footer {
+    background-color: #333;
+    margin: 0;
+    padding: 3rem 0;
+}
+
+.contenedor-footer {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.copyright {
+    margin: 0;
+}
