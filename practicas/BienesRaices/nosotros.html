@@ -4,13 +4,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
+    <title>Bienes Raices</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/normalize.css">
 </head>
+<!--flexbox solo afecta al primer hijo-->
 
 <body>
-    <h1>Nosotros</h1>
-    <a href="index.html">volver</a>
+    <header class="site-header">
+        <div class="contenedor contenido-header">
+            <div class="barra">
+                <a href="index.html"><img src="img/logo.svg" alt="logotipo de bienes raices"></a>
+                <!--se usa blank para abrir una pagina externa en una nueva pestaña
+                <a href="https:netflix.com" target="_blank">Netflix</a>-->
+                <!--cuando se tiene una navegacion-->
+                <nav class="navegacion">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+            <!--cierre barra-->
 
+            <!--h1 nombre del sitio web-->
+        </div>
+        <!--cierre contenedor-->
+    </header>
+
+    <main class="contenedor">
+        <h1 class="fw-300 centrar-texto">Conoce sobre nosotros</h1>
+
+        <div class="contenido-nostros">
+            <div class="imagen">
+                <img src="img/nosotros.jpg" alt="imagen sobre nostros">
+            </div>
+            <div class="texto-nosotros">
+                <blockquote>25 años de experiencia</blockquote>
+
+                <p>
+                    Nunc maximus facilisis neque sit amet vehicula. Vestibulum tortor quam, sodales ac urna quis, imperdiet euismod felis. Nulla consectetur ante metus, at molestie justo faucibus nec. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus gravida
+                    accumsan diam, non tristique lorem mattis vel. Sed odio arcu, sollicitudin vel sem et, varius tincidunt turpis. Etiam lacinia quam purus, eget semper augue consectetur vitae.
+                </p>
+                <p>
+                    Nullam sit amet nulla elementum, semper massa in, tristique velit. Praesent in neque quis diam fringilla ultricies dapibus in massa. Donec ut molestie lacus. Vestibulum eget rutrum felis. Duis molestie nisi ut lacus finibus, eget congue leo sagittis.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vel nunc vitae est tempor posuere sit amet hendrerit ante. Vestibulum eget mattis ligula. Mauris commodo magna tempus vestibulum hendrerit.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!--section se usa cuando el primer hijo es un encabezado(h#) + un cambio de seccion-->
+    <!--inicio seccion-->
+    <section class="contenedor seccion">
+        <h2 class="fw-300 centrar-texto">Más sobre nosotros</h2>
+
+        <div class="iconos-nosotros">
+            <div class="icono">
+                <img src="img/icono1.svg" alt="Icono seguridad">
+                <h3>Seguridad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At tenetur velit recusandae nihil a. Aliquam consequuntur, rem, dolor doloribus deserunt tempora itaque vel distinctio earum ad adipisci praesentium repudiandae ea.
+                </p>
+            </div>
+            <div class="icono">
+                <img src="img/icono2.svg" alt="Icono mejor precio">
+                <h3>El mejor precio</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, voluptas corporis porro officiis repellat magni, molestiae ullam obcaecati minus corrupti saepe accusamus error praesentium cumque vitae. Alias sint quisquam nulla.
+                </p>
+            </div>
+            <div class="icono">
+                <img src="img/icono3.svg" alt="Icono a tiempo">
+                <h3>A tiempo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laboriosam natus nulla, ratione, numquam officia optio expedita, voluptatem modi quae est. Iste maiores expedita quis labore neque animi hic excepturi?
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <!--footer se usa al final de la pagina-->
+    <footer class="site-footer seccion">
+        <div class="contenedor contenedor-footer">
+            <nav class="navegacion">
+                <a href="nosotros.html">Nostros</a>
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+
+            <p class="copyright">Todos los Derechos Reservados 2020 &copy;</p>
+        </div>
+    </footer>
 </body>
 
 </html>

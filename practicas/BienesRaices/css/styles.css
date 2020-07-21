@@ -1,4 +1,4 @@
-/*el box sizing hace que no se incremente el tamaño de los elementos cuand
+/*el box sizing hace que no se incremente el tamaño de los elementos cuando
 agregar un padding*/
 
 html {
@@ -95,6 +95,11 @@ h4 {
 
 
 /* header */
+
+.site-header {
+    background-color: #333;
+    padding: 1rem 0 3rem;
+}
 
 .site-header.inicio {
     background-image: url(../img/header.jpg);
@@ -227,6 +232,7 @@ h4 {
 /** Contenido seccion contacto**/
 
 .imagen-contacto {
+    margin-top: 2rem;
     background-image: url(../img/encuentra.jpg);
     background-position: center center;
     background-size: cover;
@@ -317,12 +323,12 @@ h4 {
 }
 
 
-/*el hijo debe llebar posicion absoluta para que pueda acceder a otras propiedades*/
+/*el hijo debe llevar posicion absoluta para que pueda acceder a otras propiedades*/
 
 .testimonial blockquote::before {
     content: '';
     background-image: url(../img/comilla.svg);
-    /*si se da width y heigh a un selector estatico se debe usar display block*/
+    /*si se da width y height a un selector estatico se debe usar display block*/
     width: 4rem;
     height: 4rem;
     display: block;
@@ -358,4 +364,23 @@ se colocan esas posiciones para que no tome complata la pagina*/
 
 .copyright {
     margin: 0;
+}
+
+
+/** Paginas internas **/
+
+.contenido-nostros {
+    /*activa el posicionamiento por grids*/
+    display: grid;
+    /*divide el espacio en columnas, tamaño columna*/
+    grid-template-columns: repeat(2, 1fr);
+    /*agrega separacion entre cada columna*/
+    grid-column-gap: 2rem;
+}
+
+.texto-nosotros blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 0 3rem;
 }
