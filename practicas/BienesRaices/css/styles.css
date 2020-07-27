@@ -35,6 +35,10 @@ body {
     text-align: center;
 }
 
+.contenido-centrado {
+    max-width: 800px;
+}
+
 
 /*imagenes y enlaces son display inline, para editar cambiar a display block/inline-block*/
 
@@ -220,6 +224,8 @@ h4 {
     display: flex;
     padding: 0;
     justify-content: space-evenly;
+    max-width: 500px;
+    flex: 1;
 }
 
 .iconos-caracteristicas li {
@@ -376,6 +382,9 @@ se colocan esas posiciones para que no tome complata la pagina*/
 
 /** Paginas internas **/
 
+
+/**Nosotros**/
+
 .contenido-nostros {
     /*activa el posicionamiento por grids*/
     display: grid;
@@ -390,4 +399,13 @@ se colocan esas posiciones para que no tome complata la pagina*/
     font-size: 2rem;
     margin: 0;
     padding: 1rem 0 0 3rem;
+}
+
+
+/**Anuncio**/
+
+.resumen-propiedad {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
