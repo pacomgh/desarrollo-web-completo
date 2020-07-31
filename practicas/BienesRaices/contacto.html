@@ -59,6 +59,34 @@
 
             <fieldset>
                 <legend>Información sobre propiedad</legend>
+                <label for="opciones">Vende o Compra</label>
+                <select name="" id="opciones">
+                    <!--disabled, no permite seleccionar esa opcion-->
+                    <!--selected, selecciona esa opcion por default-->
+                    <option value="" disabled selected>-- Seleccione --</option>
+                    <!--lo que esta dentro del value es lo que se lee el backend-->
+                    <option value="compra">Compra</option>
+                    <option value="venta">Ventas</option>
+                </select>
+
+                <label for="cantidad">Cantidad: </label>
+                <input type="number" id="" min="0" max="10">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Contacto</legend>
+
+                <p>Como desea ser contactado: </p>
+                <!--para que un input radio sepa de la existencia del otro
+                debe de tener el mismo name, de esta forma no se pueden
+                seleccionar varios al mismo-->
+                <!--lo que esta dentro del value es lo que se lee el backend-->
+                <label for="telefono">Telefóno</label>
+                <input type="radio" name="contacto" value="telefono" id="telefono">
+                <label for="email">E-mail</label>
+                <input type="radio" name="contacto" value="correo" id="email">
+
             </fieldset>
 
             <input type="submit">
