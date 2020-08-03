@@ -413,6 +413,56 @@ se colocan esas posiciones para que no tome complata la pagina*/
 
 /**Contacto**/
 
+.contacto p {
+    font-size: 1.2rem;
+    color: #4f4f4f;
+}
+
+legend {
+    font-size: 2rem;
+    color: #4f4f4f;
+}
+
 label {
+    font-weight: 700;
+    text-transform: uppercase;
     display: block;
+}
+
+
+/*Selector de atributo -> input[type="text"], 
+se usa para darle estilos a un solo tipo de input*/
+
+
+/*:not selector de negacion para no seleccionar un tipo de input*/
+
+input:not([type="submit"]),
+textarea,
+select {
+    padding: 1rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+
+/*-webkit, moz- prefijos para que funcione en cierto navegador*/
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+textarea {
+    height: 20rem;
+}
+
+.forma-contacto {
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
 }
