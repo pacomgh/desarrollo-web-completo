@@ -83,6 +83,11 @@ h4 {
     display: inline-block;
     margin-top: 3rem;
     text-align: center;
+    border: none;
+}
+
+.boton:hover {
+    cursor: pointer;
 }
 
 .boton-amarillo {
@@ -414,12 +419,13 @@ se colocan esas posiciones para que no tome complata la pagina*/
 /**Contacto**/
 
 .contacto p {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: #4f4f4f;
+    margin: 2rem 0 0 0;
 }
 
 legend {
-    font-size: 2rem;
+    font-size: 2.4rem;
     color: #4f4f4f;
 }
 
@@ -448,6 +454,12 @@ select {
     border-radius: 1rem;
 }
 
+input[type="radio"] {
+    /*auto solo toma el espacio que requiere y no mas*/
+    width: auto;
+    margin: 0;
+}
+
 
 /*-webkit, moz- prefijos para que funcione en cierto navegador*/
 
@@ -462,7 +474,8 @@ textarea {
 }
 
 .forma-contacto {
-    max-width: 600px;
+    max-width: 30rem;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }

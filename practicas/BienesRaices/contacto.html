@@ -47,13 +47,13 @@
                 <label for="">Nombre:</label>
                 <input type="text" id="nombre" placeholder="Tu nombre">
 
-                <div class="forma-contacto">
-                    <label for="">E-mail</label>
-                    <input type="email" id="email" placeholder="Tu correo electrónico">
 
-                    <label for="">Teléfono</label>
-                    <input type="text" id="tel" placeholder="Tu teléfono">
-                </div>
+                <label for="">E-mail</label>
+                <input type="email" id="email" placeholder="Tu correo electrónico">
+
+                <label for="">Teléfono</label>
+                <input type="text" id="tel" placeholder="Tu teléfono">
+
 
                 <label for="">Mensaje: </label>
                 <textarea id="mensaje"></textarea>
@@ -84,10 +84,12 @@
                 debe de tener el mismo name, de esta forma no se pueden
                 seleccionar varios al mismo-->
                 <!--lo que esta dentro del value es lo que se lee el backend-->
-                <label for="telefono">Telefóno</label>
-                <input type="radio" name="contacto" value="telefono" id="telefono">
-                <label for="email">E-mail</label>
-                <input type="radio" name="contacto" value="correo" id="email">
+                <div class="forma-contacto">
+                    <label for="telefono">Telefóno</label>
+                    <input type="radio" name="contacto" value="telefono" id="telefono">
+                    <label for="email">E-mail</label>
+                    <input type="radio" name="contacto" value="correo" id="email">
+                </div>
                 <p>Si eligio telefono eliga la fecha y hora: </p>
                 <label for="fecha">Fecha</label>
                 <input type="date" id="fecha">
