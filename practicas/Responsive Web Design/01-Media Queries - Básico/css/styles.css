@@ -40,3 +40,46 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+.contenedor {
+    max-width: 1200px;
+    /*centra el contenido del div*/
+    margin: 0 auto;
+}
+
+img {
+    /*hace la imagen responsive*/
+    max-width: 100%;
+}
+
+body {
+    background-color: cornflowerblue;
+}
+
+@media (min-width:500px) {
+    /*media query: a partir de cierto punto(cierta resolucion) puede cambiar la 
+apariencia de un elemento. Se aplica cuando el ancho de la pantalla sea
+inimo de 500 px*/
+    body {
+        background-color: lightcoral;
+    }
+}
+
+@media (min-width: 800px) {
+    /*de 600 hasta 800 px*/
+    body {
+        background-color: wheat;
+    }
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+@media (min-width:600px) {
+    /*de 0 hasta 600 px*/
+    h1 {
+        font-size: 3rem;
+    }
+}
