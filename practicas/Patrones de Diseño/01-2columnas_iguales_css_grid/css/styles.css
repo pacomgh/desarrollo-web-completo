@@ -37,3 +37,20 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+/*tamaño tablet*/
+
+@media(min-width:768px) {
+    .dos-columnas {
+        /*habilita el grid, trabaja como si fueran tablas*/
+        /*display grid solo afecta al primer nivel de hijos(como flexbox)*/
+        display: grid;
+        /*define las columnas y como se van a dividir*/
+        /*cuenta las fracciones y asigna acorde al espacio total*/
+        /*repeat(veces que divide, fracciones asignadas)*/
+        grid-template-columns: repeat(2, 1fr);
+        /*agrega un margen*/
+        column-gap: 2rem;
+    }
+}
