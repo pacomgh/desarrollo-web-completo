@@ -46,3 +46,18 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+/*Para mobile first se hace desde el tamaño pequeño8mobile) hasta grande
+(conforme la pantalla va creciendo)*/
+
+@media (min-width:992px) {
+    /*cuado la pantalla se hace grande la imagen se hace pequeña*/
+    .entrada-blog {
+        width: 500px;
+        /*display inline -> horizontal ; display bloc -> vertical*/
+        display: block;
+        /*centrado de imagen*/
+        margin: 0 auto;
+    }
+}
