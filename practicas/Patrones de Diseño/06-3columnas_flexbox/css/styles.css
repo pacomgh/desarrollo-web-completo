@@ -46,3 +46,22 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+@media(min-width:768px) {
+    .contenedor-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .contenido-principal {
+        /*factor de crecimiento, asigna 3 pixeles hasta que se acabe el
+        espacio total del contenedor
+        flex: 3;*/
+        flex-basis: calc(10% - 1rem);
+    }
+    .sidebar {
+        /*factor de crecimiento, asigna 1 pixeles hasta que se acabe el
+        espacio total del contenedor
+        flex: 1;*/
+        flex-basis: calc(20% - 1rem);
+    }
+}
