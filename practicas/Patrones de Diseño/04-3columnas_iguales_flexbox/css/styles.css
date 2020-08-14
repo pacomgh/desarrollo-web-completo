@@ -42,6 +42,10 @@ h1 {
     .tres-columnas {
         display: flex;
         justify-content: space-between;
+        /*si se agregan mas columnas y queremos ver solo las que planeamos al 
+        inicio por ejemplo 3 flex-wrap:wrap; las agrupa para que queden solo las
+        que queremos visualizar(3)*/
+        flex-wrap: wrap;
     }
     .entrada-blog {
         flex-basis: calc(33.3% - 1rem);

@@ -39,6 +39,8 @@ h1 {
 }
 
 @media(min-width:768px) {
+    /*aunque agregguemos mas columnas se acomodaran de tal manera que queden las
+    que hemos definido, en este caso 3*/
     .tres-columnas {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
