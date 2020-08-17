@@ -46,3 +46,28 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+@media(min-width:480px) {
+    .column-drop-flex {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .contenido-principal,
+    .primera {
+        flex-basis: calc(50% - 1rem);
+    }
+    /*no se le hace nada ya que por default ocupa todo el div
+    .segunda {}*/
+}
+
+@media(min-width:768px) {
+    /*se heradan los estilos de column-drop-flex*/
+    .contenido-principal,
+    .primera,
+    .segunda {
+        /*cuanto crece al factor de "1", hacerse mas pequeño: 1, base 33.3%*/
+        /*para agregar la separacion le dejamos 0, 0, base 33.3%*/
+        flex: 0 0 calc(33.3% - 2rem);
+    }
+}
