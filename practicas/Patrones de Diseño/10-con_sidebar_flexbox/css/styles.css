@@ -46,3 +46,21 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+@media(min-width:768px) {
+    .con-sidebar {
+        display: flex;
+        justify-content: space-between;
+        /*manually layout shifter*/
+        /*column, column-reverse, row, row-reverse*/
+        flex-direction: row-reverse;
+    }
+    aside {
+        flex: 0 0 calc(33.3% - 2rem);
+        /*manually layout shifter*/
+        /*order: -1;*/
+    }
+    article {
+        flex: 0 0 calc(66.6% - 2rem);
+    }
+}
