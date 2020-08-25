@@ -46,3 +46,20 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+
+/*mostly fluid trata de hacer que el contenido de la pagina web se vea fluido
+al cambiar de tamaño, al poner width en pixeles no es mostly fluid
+ancho en porcentaje*/
+
+@media(min-width:600px) {
+    .contenedor {
+        width: 80%;
+    }
+}
+
+@media(min-width:768px) {
+    .contenedor {
+        width: 90%;
+    }
+}
