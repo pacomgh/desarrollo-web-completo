@@ -71,13 +71,49 @@ img {
 }
 
 
+/** Grid **/
+
+@media(min-width: 768px) {
+    .grid {
+        display: flex;
+        justify-content: space-between;
+    }
+    .columnas-6 {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+
 /** Botones **/
 
-.btn {}
+.btn {
+    /*display bloc permite modificar el boton*/
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin: 2rem 0;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+}
 
-.btn-primario {}
+@media(min-width: 768px) {
+    .btn {
+        /*toma todo el espacio, el ancho es definido por el padding*/
+        display: inline-block;
+    }
+}
 
-.btn-ecundario {}
+.btn-primario {
+    background-color: #000;
+}
+
+.btn-secundario {
+    background-color: #784d3c;
+}
 
 
 /*los media querys van conforme se presentan los cambios, se muestran conforme
@@ -124,6 +160,8 @@ preeliminar y luego se ajusta*/
     text-align: center;
     display: block;
     font-size: 1.8rem;
+    color: #fff;
+    text-decoration: none;
 }
 
 @media(min-width: 768px) {
@@ -228,4 +266,25 @@ preeliminar y luego se ajusta*/
 
 .curso p span {
     font-weight: 400;
+}
+
+
+/** Footer **/
+
+.site-footer {
+    background-color: #000;
+    padding: 3rem;
+    margin-top: 4rem;
+}
+
+.site-footer p {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+}
+
+.site-footer p span {
+    font-weight: 700;
 }
