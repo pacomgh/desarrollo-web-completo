@@ -78,8 +78,14 @@ img {
         display: flex;
         justify-content: space-between;
     }
+    .columnas-4 {
+        flex: 0 0 calc(33.3% - 1rem);
+    }
     .columnas-6 {
         flex: 0 0 calc(50% - 1rem);
+    }
+    .columnas-8 {
+        flex: 0 0 calc(66.6% - 1rem);
     }
 }
 
@@ -250,6 +256,7 @@ preeliminar y luego se ajusta*/
 }
 
 .curso {
+    padding-top: 3rem;
     padding-bottom: 3rem;
     border-bottom: 1px solid #e1e1e1;
 }
@@ -258,13 +265,18 @@ preeliminar y luego se ajusta*/
     border-bottom: none;
 }
 
+
+/*si hay dos estilos para una clase y una tiene una etiqueta se le da prioridad
+para los estilos, cuando eso pasa debemos hacerlo mas especifico .curso p.descipcion*/
+
 .curso p {
     font-family: 'PT Sans', sans-serif;
     font-weight: 700;
     font-size: 2rem;
 }
 
-.curso p span {
+.curso p span,
+.curso p.descripcion {
     font-weight: 400;
 }
 
