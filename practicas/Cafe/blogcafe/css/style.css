@@ -77,6 +77,11 @@ img {
     .grid {
         display: flex;
         justify-content: space-between;
+        /*posiciona los elementos abajo y no a un lado*/
+        flex-wrap: wrap;
+    }
+    .centrar-columnas {
+        justify-content: center;
     }
     .columnas-4 {
         flex: 0 0 calc(33.3% - 1rem);
@@ -86,6 +91,12 @@ img {
     }
     .columnas-8 {
         flex: 0 0 calc(66.6% - 1rem);
+    }
+    .columnas-10 {
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .columnas-12 {
+        flex: 0 0 100%;
     }
 }
 
@@ -104,12 +115,21 @@ img {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 2rem;
+    /*crece el boton de contacto tambien, si los otros botones no utilizan
+    flexbox las propiedades son ignoradas*/
+    flex: 0 0 100%;
+}
+
+.btn:hover {
+    cursor: pointer;
 }
 
 @media(min-width: 768px) {
     .btn {
         /*toma todo el espacio, el ancho es definido por el padding*/
         display: inline-block;
+        /*crece el boton de contacto tambien de acuerdo al padre*/
+        flex: 0 0 auto;
     }
 }
 
@@ -299,4 +319,51 @@ para los estilos, cuando eso pasa debemos hacerlo mas especifico .curso p.descip
 
 .site-footer p span {
     font-weight: 700;
+}
+
+
+/** Contacto **/
+
+.formulario-contacto {
+    /*aplica a todos los mediaquerys*/
+    background-color: #fff;
+    padding: 5rem;
+}
+
+@media(min-width: 768px) {
+    .formulario-contacto {
+        /*poner elemento sobre otro elemento*/
+        margin-top: -10rem;
+    }
+}
+
+.formulario-contacto .campo {
+    /*en este caso separa los labels de los campos*/
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+
+/*el maximo recomendado es 3 selectores, solo en casos especiales se usan mas*/
+
+.formulario-contacto .campo label {
+    flex: 0 0 8rem;
+}
+
+.formulario-contacto .campo input:not([type="submit"]),
+.formulario-contacto textarea {
+    /*toma el resto del espacio el  excepto el tipo boton*/
+    flex: 1;
+    border: 1px solid #e1e1e1;
+    padding: 1rem;
+}
+
+.formulario-contacto textarea {
+    height: 20rem;
+}
+
+.formulario-contacto .enviar {
+    display: flex;
+    justify-content: flex-end;
 }
