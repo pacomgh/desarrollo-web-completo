@@ -27,6 +27,8 @@ img {
 }
 
 .contenedor {
+    /*para que no choque en las orillas*/
+    width: 95%;
     /*120rem = 1200px*/
     max-width: 120rem;
     margin: 0 auto;
@@ -84,6 +86,18 @@ h4 {
     margin-top: 3rem;
     text-align: center;
     border: none;
+    /*toma todo el espacio disponible*/
+    display: block;
+    flex: 0 0 100%;
+}
+
+@media(min-width: 768px) {
+    .boton {
+        /*para que tome bien los margin y padding*/
+        display: inline-block;
+        /*para que ocupe tod el espacio cuando sea pequeño en flex*/
+        flex: 0 0 auto;
+    }
 }
 
 .boton:hover {
@@ -124,6 +138,15 @@ h4 {
     /*row-alinea de izq-der | column alinea de arriba-abajo*/
     flex-direction: column;
     justify-content: space-between;
+    /*lo centra en el movil*/
+    text-align: center;
+}
+
+@media(min-width: 768px) {
+    .contenido-header {
+        /*lo manda a la izquierda en contenido mas grandes*/
+        text-align: left;
+    }
 }
 
 .contenido-header h1 {
@@ -135,15 +158,23 @@ h4 {
 
 .barra {
     /*habilita flexbox*/
-    display: flex;
+    /*display: flex;*/
     /*alineado horizontal justify-content*/
     /*flex-start | center | flex-end*/
     /*space-around(espacio laterales) / space-between*/
-    justify-content: space-between;
+    /*justify-content: space-between;*/
+    /*alineado vertical/ flex-start|center|flex-end*/
+    /*align-items: center;*/
     /*espacio hacia adentro del elemento*/
     padding-top: 3rem;
-    /*alineado vertical/ flex-start|center|flex-end*/
-    align-items: center;
+}
+
+@media(min-width: 769px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 
@@ -152,8 +183,25 @@ h4 {
 .navegacion a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.8rem;
-    margin-right: 2rem;
+    /*movil*/
+    font-size: 2.2rem;
+    /*cada enlace toma una linea en dispositivos pequeños*/
+    display: block;
+}
+
+@media(min-width: 768px) {
+    .navegacion a {
+        /*en dispositivos grandes los alinea a la izquierda seguidos uno de otro*/
+        display: inline-block;
+        /*lo ponemos aqui para que no se desalineen en movil*/
+        margin-right: 2rem;
+        font-size: 1.8rem;
+    }
+    /***:last-of-type pseudoselector, se usa para dar propiedades a un selector***/
+    /*solo lo aplica cuando esta en grande*/
+    .navegacion a:last-of-type {
+        margin: 0;
+    }
 }
 
 .navegacion a:hover {
@@ -162,26 +210,32 @@ h4 {
 }
 
 
-/***:last-of-type pseudoselector, se usa para dar propiedades a un selector***/
-
-.navegacion a:last-of-type {
-    margin: 0;
-}
-
-
 /* Iconos nosotros */
 
 
 /*flex basis + justify-content para separar elementos de web*/
 
-.iconos-nosotros {
-    display: flex;
-    justify-content: space-between;
+@media(min-width: 768px) {
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
+
+/*mobile first y aplica a todos*/
+
 .icono {
-    flex-basis: calc(33.3% - 1rem);
     text-align: center;
+}
+
+
+/*tamaños grandes -> mq*/
+
+@media(min-width: 768px) {
+    .icono {
+        flex-basis: calc(33.3% - 1rem);
+    }
 }
 
 .icono h3 {
