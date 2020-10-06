@@ -1,3 +1,16 @@
+/**snippet paul irish permite que cuando se aplica padding o border no afecte el tamaño
+del elemento principal**/
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -5,6 +18,11 @@ body {
 img {
     /*imagen responsive*/
     max-width: 100%;
+}
+
+p {
+    font-size: 16px;
+    line-height: 2;
 }
 
 
@@ -19,6 +37,17 @@ img {
     max-width: 1200px;
     /*se recomienda centrar asi los layouts*/
     margin: 0 auto;
+    /*arregla el problema de los float y el acomodo de los elementos en el contenedor*/
+    /*overflow: hidden;*/
+}
+
+.clearfix::after {
+    /*clearfix limpia el float*/
+    /*para after y before se usa content siempre*/
+    content: '';
+    clear: both;
+    /*se usa display block o display table*/
+    display: block;
 }
 
 
@@ -50,4 +79,53 @@ img {
 
 .navegacion-principal a:hover {
     background-color: #00b8e4;
+}
+
+
+/** Contenedores principales **/
+
+.contenido-principal,
+.sidebar {
+    padding: 20px;
+}
+
+@media(min-width: 769px) {
+    .contenido-principal {
+        /**cuando se usan float debe completarse el espacio total del contenedor**/
+        width: 70%;
+        float: left;
+        padding: 0 60px 0 0;
+    }
+    .sidebar {
+        /**usar porcentajes permite cierto responsive y que se ajuste mas facil**/
+        width: 30%;
+        float: right;
+        padding: 0;
+    }
+}
+
+
+/**Entradas de bloc**/
+
+h2 {
+    color: #00b8e4;
+    margin-bottom: 20px;
+}
+
+.entrada {
+    margin-top: 30px;
+}
+
+.entrada img {
+    /*las imagenes por default son display inline*/
+    display: block;
+}
+
+@media(min-width: 480px) {
+    .entrada img {
+        width: 300px;
+        /*con este float hacemos que la imagen fluya hacia la izquierda y el texto der*/
+        float: left;
+        margin: 0 30px 0 0;
+    }
 }
