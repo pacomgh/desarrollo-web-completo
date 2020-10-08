@@ -11,6 +11,9 @@ html {
     box-sizing: inherit;
 }
 
+
+/** Globales **/
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -28,6 +31,26 @@ p {
 
 /*se recomienda usar clases antes que ids, los ultimos hacen mas lento el mostrar
  el html y mas pesada la hoja de estilos*/
+
+.boton {
+    background-color: #00b8e4;
+    padding: 10px 60px;
+    /*permite agregar un margin*/
+    display: inline-block;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 18px;
+    /*le da uns efecto de transiscion*/
+    /*en donde lo queremos dar, tiempo, tipo*/
+    transition: background-color .3s ease-in-out;
+}
+
+.boton:hover {
+    background-color: #0296bb;
+}
 
 .site-header {
     padding: 20px 0;
@@ -51,10 +74,47 @@ p {
 }
 
 
+/** Navegacion responsive **/
+
+.barra {
+    overflow: hidden;
+}
+
+.mobile-menu {
+    color: #fff;
+    font-size: 2rem;
+    /*centramos el icono con estas 2 propiedades*/
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+}
+
+#nav:target {
+    max-height: 800px;
+}
+
+.navegacion-principal {
+    max-height: 0;
+    transform: .5s;
+}
+
+@media(min-width: 768px) {
+    .navegacion-principal {
+        /*ignora el max-height de ahora en adelante*/
+        max-height: unset;
+    }
+    .mobile-menu,
+    .cerrar {
+        display: none!important;
+    }
+}
+
+
 /** Navegacion **/
 
 .barra {
     background-color: #db008b;
+    margin-top: 40px;
 }
 
 .navegacion-principal a {
@@ -84,6 +144,10 @@ p {
 
 /** Contenedores principales **/
 
+.contenido-principal {
+    margin-top: 40px;
+}
+
 .contenido-principal,
 .sidebar {
     padding: 20px;
@@ -101,6 +165,7 @@ p {
         width: 30%;
         float: right;
         padding: 0;
+        margin-top: 40px;
     }
 }
 
@@ -113,7 +178,11 @@ h2 {
 }
 
 .entrada {
-    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.entrada:last-of-type {
+    margin-bottom: 0;
 }
 
 .entrada img {
@@ -128,4 +197,83 @@ h2 {
         float: left;
         margin: 0 30px 0 0;
     }
+}
+
+.entrada p {
+    text-align: justify;
+}
+
+
+/** sidebar **/
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li:hover {
+    background-color: #00b8e4;
+}
+
+.sidebar li a {
+    color: #00b8e4;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.sidebar ul li:hover a {
+    color: #fff;
+}
+
+.footer-sitio {
+    background-color: #db008b;
+    padding-top: 10px;
+    margin-top: 60px;
+    color: #fff;
+    text-align: center;
+}
+
+.footer-sitio h2 {
+    color: #fff;
+}
+
+.footer-sitio a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.footer-sitio a:last-of-type {
+    /*quitamos el margin right del ultimo elemento de la lista*/
+    margin-right: 0;
+}
+
+@media(min-width: 768px) {
+    .footer-sitio .nosotros {
+        /*lo mandamos a la izquierda*/
+        float: left;
+        width: 30%;
+        /*mandamos el texto en pantalla grande a la izquierda
+        paara que no aparezca centrado*/
+        text-align: left;
+    }
+    .footer-sitio .menu {
+        /*mandamos este texto a la derecha*/
+        float: right;
+        width: 50%;
+        /*mandamos el texto en pantalla grande a la derecha
+        paara que no aparezca centrado*/
+        text-align: right;
+    }
+}
+
+.copyright {
+    background-color: #b10474;
+    margin: 50px 0 0 0;
+    padding: 20px 0;
 }

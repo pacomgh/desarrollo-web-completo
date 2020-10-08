@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog de Viajes</title>
+    <script src="https://kit.fontawesome.com/f724dce25f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -15,13 +16,21 @@
     </header>
 
     <div class="barra">
+        <a href="#nav" class="mobile-menu">
+            <i class="fas fa-ellipsis-v"></i>
+        </a>
         <!--ponemos la clase contenedor para que queden centrada la navegacion-->
-        <nav class="navegacion-principal contenedor">
+        <nav id="nav" class="navegacion-principal contenedor">
             <a href="#">Inicio</a>
             <a href="#">Nosotros</a>
             <a href="#">Blog</a>
             <a href="#">Tienda</a>
             <a href="#">Contacto</a>
+
+            <!--agregamos un inker para cerrar cuando se expande-->
+            <a href="#" class="cerrar">
+                <i class="fas fa-times"></i>
+            </a>
         </nav>
     </div>
 
@@ -73,7 +82,30 @@
             </section>
         </aside>
     </div>
-    <p>hola</p>
+    <!--.contenedor-->
+
+    <footer class="footer-sitio">
+        <!--clear fix es una clase que soluciona el probnlema de los float-->
+        <div class="contenedor clearfix">
+            <section class="nosotros">
+                <h2>Sobre Nostros</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quae eos veritatis. Error corrupti, numquam nesciunt nemo suscipit libero voluptatum minima labore laudantium? Autem sint repellendus, amet eveniet aliquid quidem!</p>
+            </section>
+            <section class="menu">
+                <h2>Menú de navegación</h2>
+                <nav>
+                    <a href="#">Inicio</a>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Tienda</a>
+                    <a href="#">Contacto</a>
+                </nav>
+            </section>
+        </div>
+        <p class="copyright">
+            BlogDeViajes - Todos los derechos reservados 2020 &copy;
+        </p>
+    </footer>
 
 </body>
 
