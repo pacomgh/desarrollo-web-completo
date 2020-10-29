@@ -1,5 +1,14 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+
 html {
     height: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -48,5 +57,83 @@ h2 {
 }
 
 .listado-productos {
-    margin-top: 40px;
+    padding: 0;
+    list-style: none;
+}
+
+.listado-productos li {
+    float: left;
+    width: 50%;
+    padding: 20px;
+    /*centramos el texto*/
+    text-align: center;
+}
+
+
+/** Los float los ocupamos cuando queresmo compatibilidad con todos los navegadores
+incluyendo el internet explorer**/
+
+
+/** 2n+1 aplica el clear a cada dos elementos de float
+2(0) + 1 y aumenta en cada interacion 1,3,5,etc **/
+
+.listado-productos li:nth-child(2n+1) {
+    /*limpia el float*/
+    clear: both;
+}
+
+@media(min-width: 768px) {
+    .listado-productos li {
+        /*el float se hereda*/
+        width: 33.3%;
+    }
+    .listado-productos li:nth-child(2n+1) {
+        /*quitamos el clear que habiamos puesto arriba*/
+        clear: unset;
+    }
+    /*aplica al elemento 1,4,7*/
+    .listado-productos li:nth-child(3n+1) {
+        /*agregamos un nuevo clear*/
+        clear: unset;
+    }
+}
+
+.listado-productos li img {
+    /*agregamos borde morado + transparencia*/
+    border: 10px solid rgba(128, 1, 195, .45);
+    /*agregamos un efecto de transicion*/
+    transition: border-color .3s ease-in-out;
+}
+
+.listado-productos li img:hover {
+    /*agregamos borde morado + transparencia*/
+    border: 10px solid rgba(128, 1, 195, 1);
+}
+
+.listado-productos li p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+
+span.precio {
+    color: #ffce00;
+    font-size: 40px;
+}
+
+.boton {
+    background-color: #ffce00;
+    padding: 10px 40px;
+    margin-top: 10px;
+    /*para poder darñle estilos al a*/
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: #8001c3;
+    transition: background-color .3s ease-in-out;
+}
+
+.boton:hover {
+    background-color: #ebbc00;
 }
