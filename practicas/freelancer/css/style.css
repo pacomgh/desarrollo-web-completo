@@ -1,0 +1,73 @@
+/**las custom properties(son como variables) se almacenan en una variable que llamaremos root**/
+
+:root {
+    --oscuro: #212121;
+}
+
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    box-sizing: border-box;
+    /**Hacemos que el gradiente se extienda por toda la pagina web**/
+    min-height: 100%;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Krub', sans-serif;
+    /**Hacemos que el gradiente se extienda por toda la pagina web**/
+    min-height: 100%;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-size: 1.6rem;
+}
+
+
+/**siempre se aplica flexbox al contenedor, es decir al padre**/
+
+.site-header {
+    background-color: #fff;
+}
+
+.site-header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    /**cuando hanilitamos flex los elelemtos se colocan de iz a derecha**/
+    display: flex;
+    /**para cambiar la direccion en que se acomoda con flexbox**/
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(min-width: 768px) {
+    .site-header nav {
+        flex-direction: row;
+        /**display flex se hereda**/
+        justify-content: space-between;
+    }
+}
+
+.site-header nav a {
+    color: var(--oscuro);
+    font-size: 2.2rem;
+    text-decoration: none;
+    margin-bottom: 2rem;
+}
+
+.site-header nav a:last-of-type {
+    /*quitamos el margen del ultimo elemento con esta propiedad*/
+    margin-bottom: 0;
+}
+
+@media(min-width: 768px) {
+    .site-header nav a {
+        margin-bottom: 0;
+    }
+}
