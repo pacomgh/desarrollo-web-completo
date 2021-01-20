@@ -1,7 +1,10 @@
 /**las custom properties(son como variables) se almacenan en una variable que llamaremos root**/
 
 :root {
+    --primario: #ffc107;
+    --secundario: #0097a7;
     --oscuro: #212121;
+    --ancho-pantalla: 1200px
 }
 
 
@@ -28,6 +31,24 @@ body {
     font-size: 1.6rem;
 }
 
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--secundario)
+}
+
 
 /**siempre se aplica flexbox al contenedor, es decir al padre**/
 
@@ -36,7 +57,7 @@ body {
 }
 
 .site-header nav {
-    max-width: 1200px;
+    max-width: var(--ancho-pantalla);
     margin: 0 auto;
     padding: 2rem 0;
     /**cuando hanilitamos flex los elelemtos se colocan de iz a derecha**/
@@ -70,4 +91,67 @@ body {
     .site-header nav a {
         margin-bottom: 0;
     }
+}
+
+.hero {
+    height: 45rem;
+    background-image: url(../img/hero.jpg);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero::after {
+    /*con el after siempre va un content, si es color de fondo va vacio*/
+    content: '';
+    background-color: rgba(0, 0, 0, .7);
+    /*si el hijo es absolute el padre debe ser relative para darle posicion*/
+    position: absolute;
+    /*estos son para que tome todo el espacio*/
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.contenedor-hero {
+    color: white;
+    /*Utilizamos estas dos para que las letras se pasen al frente de la opacidad negra*/
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.contenedor-hero i {
+    font-size: 5rem;
+    color: var(--primario);
+}
+
+.boton {
+    background-color: var(--secundario);
+    padding: 1rem 5rem;
+    display: inline-block;
+    margin-top: 1rem;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.2rem;
+    border-radius: .5rem;
+}
+
+.contenedor {
+    max-width: var(--ancho-pantalla);
+    margin: 0 auto;
+    background-color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    -webkit-box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 10px 21px -9px rgba(0, 0, 0, 0.75);
+}
+
+.servicios {
+    margin-top: 3rem auto;
 }
