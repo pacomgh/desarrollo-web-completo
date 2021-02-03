@@ -1,3 +1,15 @@
+/*pseudolementos si inician con :*/
+
+:root {
+    /*root almacena las variables conocidas como custom properties*/
+    --blanco: #fff;
+    --oscuro: #212121;
+    /*colo primario el que mas se va a utilziar*/
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+}
+
 html {
     /*reiniciamos el tamaño a 62.5% -> 1rem = 10px*/
     font-size: 62.5%;
@@ -5,7 +17,11 @@ html {
 
 body {
     font-size: 16px;
+    font-family: 'Krub', sans-serif;
 }
+
+
+/*especificidad -> etiqueta(min) / .clase etiqueta(mediano) / etiqueta.clase etiqueta(grande)*/
 
 .titulo {
     text-align: center;
