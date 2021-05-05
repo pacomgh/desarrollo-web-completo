@@ -10,9 +10,19 @@
     --gris: #757575;
 }
 
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+
 html {
     /*reiniciamos el tamaño a 62.5% -> 1rem = 10px*/
     font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
 }
 
 body {
@@ -81,4 +91,18 @@ body {
     background-image: url(../img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 450px;
+    padding: 20px;
 }
+
+
+/*}
+background-image: url(../img/hero.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+height: 250px;
+padding: 20px;
+
+}
+
+}*/
